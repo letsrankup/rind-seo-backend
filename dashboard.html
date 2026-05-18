@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIND Cloud Console - User Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .panel-glow { border: 1px solid rgba(255, 255, 255, 0.05); background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(8px); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans">
+
+    <header class="w-full border-b border-slate-800/60 bg-slate-950/80 px-6 py-4 flex items-center justify-between backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center shadow-md shadow-emerald-500/20">
+                <i class="fa-solid fa-terminal text-slate-950 text-sm font-bold"></i>
+            </div>
+            <span class="font-black text-sm tracking-widest text-white uppercase">RIND CONSOLE <span class="text-emerald-400 font-mono text-xs">v2.0</span></span>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-full text-xs">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-slate-400 font-medium">Node Active</span>
+            </div>
+            <button class="text-slate-400 hover:text-white text-lg"><i class="fa-regular fa-bell"></i></button>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 space-y-6">
+
+        <section class="w-full panel-glow rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-96 h-full bg-gradient-to-l from-emerald-500/5 to-transparent pointer-events-none"></div>
+            <div class="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left relative">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Profile" class="w-20 h-20 rounded-2xl object-cover border-2 border-emerald-500/30 p-1 bg-slate-950">
+                    <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded-md uppercase tracking-wider shadow">PRO</span>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-white flex items-center gap-2 justify-center sm:justify-start">
+                        Sangat Professional <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+                    </h2>
+                    <p class="text-xs text-slate-400 font-mono mt-0.5">UID-7860182_RIND_X</p>
+                    <div class="flex flex-wrap gap-2 mt-3 justify-center sm:justify-start">
+                        <span class="bg-slate-950 text-slate-400 text-[11px] px-2.5 py-1 rounded-md border border-slate-800/80 font-mono"><i class="fa-regular fa-envelope mr-1.5"></i>sangat@buetk.edu</span>
+                        <span class="bg-slate-950 text-slate-400 text-[11px] px-2.5 py-1 rounded-md border border-slate-800/80 font-mono"><i class="fa-solid fa-phone mr-1.5"></i>+92 300 1234567</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-4 w-full md:w-auto border-t border-slate-800/50 md:border-t-0 pt-4 md:pt-0">
+                <div class="bg-slate-950/60 border border-slate-800/60 p-4 rounded-xl flex-1 md:w-36 text-center">
+                    <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-widest">Available Credit</span>
+                    <span class="text-xl font-mono font-bold text-emerald-400 mt-1 block">$1,420.50</span>
+                </div>
+                <div class="bg-slate-950/60 border border-slate-800/60 p-4 rounded-xl flex-1 md:w-36 text-center">
+                    <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-widest">API Usage</span>
+                    <span class="text-xl font-mono font-bold text-blue-400 mt-1 block">94.2k <span class="text-xs text-slate-500">/mo</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="panel-glow p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg"><i class="fa-solid fa-network-wired"></i></div>
+                <div><span class="block text-xs text-slate-500 font-medium">Node Latency</span><span class="text-sm font-mono font-bold">14ms</span></div>
+            </div>
+            <div class="panel-glow p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg"><i class="fa-solid fa-bolt"></i></div>
+                <div><span class="block text-xs text-slate-500 font-medium">Server Build</span><span class="text-sm font-mono font-bold text-purple-400">Vercel Edge</span></div>
+            </div>
+            <div class="panel-glow p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg"><i class="fa-solid fa-layer-group"></i></div>
+                <div><span class="block text-xs text-slate-500 font-medium">Scraping Threads</span><span class="text-sm font-mono font-bold">64 Concurrent</span></div>
+            </div>
+            <div class="panel-glow p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg"><i class="fa-solid fa-fingerprint"></i></div>
+                <div><span class="block text-xs text-slate-500 font-medium">Security Encryption</span><span class="text-sm font-mono font-bold text-emerald-400">AES-256 GCM</span></div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <div class="lg:col-span-2 panel-glow rounded-3xl p-6 space-y-4 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-base font-bold text-white flex items-center gap-2"><i class="fa-solid fa-circle-nodes text-emerald-400"></i> Advanced Enterprise Core Auditor</h3>
+                    <p class="text-xs text-slate-400 mt-1">Submit dynamic domain layouts directly into your cloud-hosted scrapers.</p>
+                </div>
+                
+                <div class="space-y-3 my-2">
+                    <div class="flex bg-slate-950 rounded-xl border border-slate-800 focus-within:border-emerald-500/40 overflow-hidden transition-all">
+                        <span class="bg-slate-900/80 px-4 py-3 text-xs text-slate-500 font-mono flex items-center border-r border-slate-800">TARGET_URL</span>
+                        <input type="url" id="targetUrlInput" placeholder="https://example.com" class="w-full bg-transparent px-4 py-3 text-sm font-mono text-white placeholder-slate-700 outline-none">
+                    </div>
+                    <button onclick="triggerCloudAudit()" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-slate-950 font-black py-3 px-4 rounded-xl shadow-lg shadow-emerald-500/5 hover:opacity-95 active:scale-[0.99] transition-all text-xs uppercase tracking-widest">
+                        Fire System Asynchronous Crawl Engine
+                    </button>
+                </div>
+
+                <div class="w-full bg-slate-950 rounded-2xl border border-slate-900 p-4 flex-1 min-h-[160px] flex flex-col">
+                    <div class="flex items-center justify-between pb-2 border-b border-slate-900 text-[10px] font-bold text-slate-500 tracking-wider font-mono">
+                        <span>LIVE TRANSLATION STREAM RECORD</span>
+                        <span class="text-emerald-500" id="liveStatusBox">IDLE READY</span>
+                    </div>
+                    <pre id="jsonLiveResponseConsole" class="text-[11px] font-mono text-slate-400 mt-3 whitespace-pre-wrap overflow-y-auto max-h-[180px] leading-relaxed">
+{
+  "system_message": "Ready to execute parsing sequences. Input a valid link structure above to stream structured analysis."
+}</pre>
+                </div>
+            </div>
+
+            <div class="panel-glow rounded-3xl p-6 space-y-5">
+                <div>
+                    <h3 class="text-base font-bold text-white"><i class="fa-solid fa-gears mr-2 text-blue-400"></i> Account Architecture</h3>
+                    <p class="text-xs text-slate-400 mt-1">Configure individual dynamic configuration states.</p>
+                </div>
+
+                <div class="space-y-2.5 text-xs">
+                    <div class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-900 hover:border-slate-800 transition-all cursor-pointer group">
+                        <span class="text-slate-300 group-hover:text-white transition-colors"><i class="fa-solid fa-key text-slate-500 w-5"></i> Manage API Authentication Tokens</span>
+                        <i class="fa-solid fa-angle-right text-slate-600"></i>
+                    </div>
+                    <div class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-900 hover:border-slate-800 transition-all cursor-pointer group">
+                        <span class="text-slate-300 group-hover:text-white transition-colors"><i class="fa-solid fa-user-gear text-slate-500 w-5"></i> Enterprise Partner Management</span>
+                        <i class="fa-solid fa-angle-right text-slate-600"></i>
+                    </div>
+                    <div class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-900 hover:border-slate-800 transition-all cursor-pointer group">
+                        <span class="text-slate-300 group-hover:text-white transition-colors"><i class="fa-solid fa-wallet text-slate-500 w-5"></i> Billing Logs & CPA Tracking</span>
+                        <i class="fa-solid fa-angle-right text-slate-600"></i>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2.5">Security Session Log History</span>
+                    <div class="space-y-2 font-mono text-[10px]">
+                        <div class="flex justify-between text-slate-400"><span class="text-emerald-400">● Auth Success</span><span>18 May 21:44</span></div>
+                        <div class="flex justify-between text-slate-400"><span class="text-blue-400">● IP Verified</span><span>18 May 20:27</span></div>
+                        <div class="flex justify-between text-slate-500"><span>○ System Build Sync</span><span>18 May 16:34</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        async function triggerCloudAudit() {
+            const targetUrl = document.getElementById('targetUrlInput').value.trim();
+            const consoleBox = document.getElementById('jsonLiveResponseConsole');
+            const statusBox = document.getElementById('liveStatusBox');
+            
+            if (!targetUrl) {
+                alert('Please enter a target website URL first!');
+                return;
+            }
+            
+            statusBox.innerText = "EXECUTING NODE SCANS...";
+            statusBox.className = "text-amber-400 animate-pulse";
+            consoleBox.innerText = `{\n  "status": "Processing Request",\n  "target_url": "${targetUrl}",\n  "engine": "RIND Asynchronous Thread Spawning..."\n}`;
+            
+            try {
+                // Connecting to your direct live deployed backend serverless infrastructure
+                const backendEndpoint = `https://rind-seo-backend.vercel.app/api/v2/audit?url=${encodeURIComponent(targetUrl)}`;
+                const response = await fetch(backendEndpoint);
+                const data = await response.json();
+                
+                statusBox.innerText = "SCAN COMPLETE 200";
+                statusBox.className = "text-emerald-400";
+                consoleBox.innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                statusBox.innerText = "ENGINE CONNECTION FAILURE";
+                statusBox.className = "text-red-400";
+                consoleBox.innerText = JSON.stringify({
+                    "status": "Failed",
+                    "error": "Could not connect to live server route architecture.",
+                    "details": error.message
+                }, null, 2);
+            }
+        }
+    </script>
+</body>
+</html>
+
