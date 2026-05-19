@@ -2,21 +2,28 @@
   "version": 2,
   "builds": [
     {
-      "src": "main.py",
+      "src": "seo_analyzer.py",
       "use": "@vercel/python",
       "config": { "maxDuration": 60 }
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type, Authorization"
       },
-      "dest": "main.py"
+      "dest": "seo_analyzer.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
-
