@@ -2,18 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "seo_analyzer.py",
+      "src": "api/seo_analyzer.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "api/seo_analyzer.py"
+    },
+    {
       "src": "/(.*)",
-      "dest": "seo_analyzer.py"
+      "dest": "api/seo_analyzer.py"
     }
   ],
   "functions": {
-    "seo_analyzer.py": {
+    "api/seo_analyzer.py": {
       "memory": 1024,
       "maxDuration": 25
     }
